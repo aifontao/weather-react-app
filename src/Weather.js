@@ -55,13 +55,13 @@ export default function Weather() {
             <li>Humidity: {forecast.humidity} %</li>
             <li>Wind: {forecast.wind} km/h</li>
             <li>
-              <img src={forecast.icon} alt={forecast.description}></img>{" "}
+              <img src={forecast.icon} alt={forecast.description}></img>
             </li>
           </ul>
         </div>
       </div>
     );
   } else {
-    return form;
+    return <div className="Container">{form}</div>;
   }
 }

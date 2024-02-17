@@ -1,9 +1,10 @@
 .Weather {
-  background-color: bisque;
+  background-color: lightblue;
 }
 
-.Container {
-  padding: 40px;
+form {
+  background-color: lightblue;
+  padding: 20px;
 }
 form input {
   font-size: 20px;
