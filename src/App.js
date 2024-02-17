@@ -1,9 +1,11 @@
 import "./App.css";
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <h1>Weather app</h1>
+      <Weather />
       <footer>
         This react app was coded by{" "}
         <a
