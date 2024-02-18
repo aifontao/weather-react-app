@@ -45,7 +45,7 @@ export default function Weather() {
 
   if (loaded) {
     return (
-      <div className="Weather Container">
+      <div className="Weather">
         {form}
         <div className="CurrentWeatherData">
           <h1>{forecast.cityName}</h1>
@@ -62,6 +62,6 @@ export default function Weather() {
       </div>
     );
   } else {
-    return <div className="Container">{form}</div>;
+    return form;
   }
 }
