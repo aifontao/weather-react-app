@@ -69,7 +69,6 @@ export default function Weather() {
                   <ul>
                     <li>{forecast.temperature} °C</li>
                     <li>Feels like 14°C</li>
-                    <li>{forecast.description}</li>
                   </ul>
                 </div>
               </div>
@@ -80,6 +79,7 @@ export default function Weather() {
                   <h1>{forecast.cityName} - Country</h1>
                 </li>
                 <li>Sunday, 18 Feb 2024 | 20:04 </li>
+                <li>{forecast.description}</li>
               </ul>
             </div>
           </div>

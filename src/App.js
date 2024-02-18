@@ -5,7 +5,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather app</h1>
         <Weather />
         <footer>
           This react app was coded by{" "}
