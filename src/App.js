@@ -1,7 +1,7 @@
 import "./App.css";
 import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <h1>Weather app</h1>
@@ -35,5 +35,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
