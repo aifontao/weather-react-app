@@ -34,12 +34,23 @@ export default function Weather() {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <input
-        type="search"
-        placeholder="Enter a city..."
-        onChange={updateCity}
-      ></input>
-      <input type="submit" value="Search"></input>
+      <div className="row">
+        <div className="col-10">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            className="form-control"
+            onChange={updateCity}
+          ></input>
+        </div>
+        <div className="col-2">
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-primary"
+          ></input>
+        </div>
+      </div>
     </form>
   );
 
@@ -48,16 +59,52 @@ export default function Weather() {
       <div className="Weather">
         {form}
         <div className="CurrentWeatherData">
-          <h1>{forecast.cityName}</h1>
-          <ul>
-            <li>Tempertature: {forecast.temperature} °C</li>
-            <li>Description: {forecast.description}</li>
-            <li>Humidity: {forecast.humidity} %</li>
-            <li>Wind: {forecast.wind} km/h</li>
-            <li>
-              <img src={forecast.icon} alt={forecast.description}></img>
-            </li>
-          </ul>
+          <div className="row">
+            <div className="col-6">
+              <div className="row">
+                <div className="col-6">
+                  <img src={forecast.icon} alt={forecast.description}></img>
+                </div>
+                <div className="col-6">
+                  <ul>
+                    <li>{forecast.temperature} °C</li>
+                    <li>Feels like 14°C</li>
+                    <li>{forecast.description}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <ul>
+                <li>
+                  <h1>{forecast.cityName} - Country</h1>
+                </li>
+                <li>Sunday, 18 Feb 2024 | 20:04 </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-6">
+              <ul>
+                <li>Monday 💧9% 🌞 21° 10°</li>
+                <li>Tuesday 💧9% 🌞 21° 10°</li>
+                <li>Wednesday 💧9% 🌞 21° 10°</li>
+                <li>Friday 💧9% 🌞 21° 10°</li>
+                <li>Saturday 💧9% 🌞 21° 10°</li>
+              </ul>
+            </div>
+            <div className="col-6">
+              <div className="row">
+                <div className="col-6">Max temp</div>
+                <div className="col-6">Min temp</div>
+              </div>
+              <div className="row">
+                <div className="col-6">Humidity: {forecast.humidity} %</div>
+                <div className="col-6">Wind: {forecast.wind} km/h</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
