@@ -9,7 +9,7 @@ export default function App() {
       <footer>
         This react app was coded by{" "}
         <a
-          href="https://github.com/aifontao?tab=repositories"
+          href="https://ana-fontao-portfolio.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
