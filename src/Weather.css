@@ -1,14 +1,87 @@
 .Weather {
-  background-color: lightblue;
-}
-
-form {
-  background-color: lightblue;
+  background: linear-gradient(
+    178deg,
+    rgba(201, 234, 252, 0.51) 14.9%,
+    rgba(139, 192, 216, 0.73) 80%
+  );
+  border-radius: 20px;
+  font-size: 14px;
   padding: 20px;
 }
-form input {
+
+.Weather form {
+  margin: 0 auto;
+  padding: 20px;
+}
+.Weather form input {
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 25px;
+}
+
+.Weather .button {
+  background-color: #403a70;
+  border: 1px solid #403a70;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: 600;
+  padding: 10px 25px;
+}
+
+.Weather .CurrentWeatherDetails {
+  text-align: start;
+}
+
+.Weather .CurrentIcon {
+  position: relative;
+  top: -10px;
+}
+
+.Weather .CurrentTemperature {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.Weather .Units {
   font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: -20px;
 }
-ul {
+
+.Weather .Description {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.Weather .CurrentCityDetails {
+  text-align: end;
+  line-height: 1.8;
+}
+.Weather .CurrentCityDetails h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.Weather .CurrentCityDetails h2 {
+  font-size: 16px;
+}
+.Weather .CurrentCityDetails .DateDetails {
+  font-size: 12px;
+}
+
+.Weather .TomorrowProspects {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.Weather ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/*night-mode background: linear-gradient(to top, #09203f 0%, #537895 100%);*/
