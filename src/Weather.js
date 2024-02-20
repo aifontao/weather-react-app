@@ -25,8 +25,6 @@ export default function Weather() {
   let units = "metric";
   const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  //let apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
-  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(handleResponse);
 
   let form = (
@@ -115,12 +113,10 @@ export default function Weather() {
       </div>
     );
   } else {
-    //let apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
     let city = "London";
     let units = "metric";
     const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-    //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
