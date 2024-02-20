@@ -3,44 +3,40 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [loaded, setLoaded] = useState(false);
-  const [city, setCity] = useState();
-  const [forecast, setForecast] = useState();
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
-  function showForecast(response) {
-    setLoaded(true);
+  function handleResponse(response) {
     console.log(response);
-    setForecast({
-      cityName: response.data.city,
-      temperature: Math.round(response.data.temperature.current),
-      description: response.data.condition.description,
-      humidity: response.data.temperature.humidity,
+    setWeatherData({
+      ready: true,
+      cityName: response.data.name,
+      countryName: response.data.sys.country,
+      temperature: Math.round(response.data.main.temp),
+      feelsLike: Math.round(response.data.main.feels_like),
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
-      icon: response.data.condition.icon_url,
+      //iconUrl: response.data.condition.icon_url,
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    let apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
-    let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(showForecast);
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
+  let city = "London";
+  let units = "metric";
+  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  //let apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
+  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(handleResponse);
 
   let form = (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div className="row">
         <div className="col-9">
           <input
             type="search"
             placeholder="Enter a city..."
             className="form-control"
-            onChange={updateCity}
           ></input>
         </div>
         <div className="col-3">
@@ -50,7 +46,7 @@ export default function Weather() {
     </form>
   );
 
-  if (loaded) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         {form}
@@ -60,8 +56,8 @@ export default function Weather() {
               <div className="row">
                 <div className="col-5 p-0">
                   <img
-                    src={forecast.icon}
-                    alt={forecast.description}
+                    src={`https://ssl.gstatic.com/onebox/weather/64/cloudy.png`}
+                    alt={weatherData.description}
                     className="CurrentIcon"
                   ></img>
                 </div>
@@ -69,12 +65,13 @@ export default function Weather() {
                   <ul className="CurrentWeatherDetails">
                     <li>
                       <span className="CurrentTemperature">
-                        {forecast.temperature}
-                      </span>{" "}
-                      <span className="Units"> °C</span>
+                        {weatherData.temperature}
+                      </span>
+                      <span className="Units">°C</span>
                     </li>
-                    <li>Feels like 14°C</li>
-                    <li className=" text-capitalize">{forecast.description}</li>
+                    <li className=" text-capitalize">
+                      {weatherData.description}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -82,10 +79,10 @@ export default function Weather() {
             <div className="col-7">
               <ul className="CurrentCityDetails">
                 <li>
-                  <h1>{forecast.cityName}</h1>
+                  <h1>{weatherData.cityName}</h1>
                 </li>
                 <li>
-                  <h2>Country</h2>
+                  <h2>{weatherData.countryName}</h2>
                 </li>
                 <li>Sunday, 18 Feb 2024 📅</li>
                 <li>20:04 🕐</li>
@@ -95,22 +92,22 @@ export default function Weather() {
         </div>
         <div className="row CurrentWeatherWidgets">
           <div className="col-3">
-            10
+            {weatherData.feelsLike}°C
             <br />
-            Min temp
+            Feels like
           </div>
           <div className="col-3">
-            20
+            {weatherData.pressure} bar
             <br />
-            Max temp
+            Pressure
           </div>
           <div className="col-3">
-            10%
+            {weatherData.humidity}%
             <br />
             Humidity
           </div>
           <div className="col-3">
-            25km/h
+            {weatherData.wind} km/h
             <br />
             Wind
           </div>
@@ -118,6 +115,13 @@ export default function Weather() {
       </div>
     );
   } else {
-    return form;
+    //let apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
+    let city = "London";
+    let units = "metric";
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+    return "Loading...";
   }
 }
