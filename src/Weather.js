@@ -96,29 +96,81 @@ export default function Weather() {
 
         <div className="TomorrowProspects">
           <ul>
-            <li>Prospects for tomorrow</li>
+            <li>
+              <strong>Prospects for tomorrow</strong>
+            </li>
             <li>Sobretudo sol - Maxima de 21</li>
           </ul>
         </div>
 
         <div className="row">
-          <div className="col-6">
-            <ul>
-              <li>Monday 💧9% 🌞 21° 10°</li>
-              <li>Tuesday 💧9% 🌞 21° 10°</li>
-              <li>Wednesday 💧9% 🌞 21° 10°</li>
-              <li>Friday 💧9% 🌞 21° 10°</li>
-              <li>Saturday 💧9% 🌞 21° 10°</li>
-            </ul>
+          <div className="col-6 Forecast">
+            <div className="row DailyForecast">
+              <div className="col-3">Mon</div>
+              <div className="col-3">💧9%</div>
+              <div className="col-2">🌞</div>
+              <div className="col-2">21°</div>
+              <div className="col-2">10°</div>
+            </div>
+            <div className="row DailyForecast">
+              <div className="col-3">Tue</div>
+              <div className="col-3">💧9%</div>
+              <div className="col-2">🌞</div>
+              <div className="col-2">21°</div>
+              <div className="col-2">10°</div>
+            </div>
+            <div className="row DailyForecast">
+              <div className="col-3">Wed</div>
+              <div className="col-3">💧9%</div>
+              <div className="col-2">🌞</div>
+              <div className="col-2">21°</div>
+              <div className="col-2">10°</div>
+            </div>
+            <div className="row DailyForecast">
+              <div className="col-3">Fri</div>
+              <div className="col-3">💧9%</div>
+              <div className="col-2">🌞</div>
+              <div className="col-2">21°</div>
+              <div className="col-2">10°</div>
+            </div>
+            <div className="row DailyForecast">
+              <div className="col-3">Sat</div>
+              <div className="col-3">💧9%</div>
+              <div className="col-2">🌞</div>
+              <div className="col-2">21°</div>
+              <div className="col-2">10°</div>
+            </div>
           </div>
-          <div className="col-6">
+          <div className="col-6 ">
             <div className="row">
-              <div className="col-6">Max temp</div>
-              <div className="col-6">Min temp</div>
+              <div className="col-5 CurrentWeatherWidgets">
+                LOGO
+                <br />
+                20
+                <br />
+                Max temp
+              </div>
+              <div className="col-5 CurrentWeatherWidgets">
+                LOGO
+                <br />
+                -10
+                <br />
+                Min temp
+              </div>
             </div>
             <div className="row">
-              <div className="col-6">Humidity: {forecast.humidity} %</div>
-              <div className="col-6">Wind: {forecast.wind} km/h</div>
+              <div className="col-5 CurrentWeatherWidgets">
+                LOGO
+                <br />
+                Humidity <br />
+                {forecast.humidity} %
+              </div>
+              <div className="col-5 CurrentWeatherWidgets">
+                LOGO
+                <br />
+                Wind <br />
+                {forecast.wind} km/h
+              </div>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
 }
 .Weather form input {
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 14px;
   padding: 10px 25px;
 }
 
@@ -72,10 +72,29 @@
 }
 
 .Weather .TomorrowProspects {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+  font-size: 12px;
   margin: 20px 0;
   padding: 10px;
+}
+
+.Weather .Forecast {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.Weather .Forecast .DailyForecast {
+  margin: 15px 0;
+}
+.Weather .CurrentWeatherWidgets {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 5px;
+  padding: 15px;
 }
 
 .Weather ul {
