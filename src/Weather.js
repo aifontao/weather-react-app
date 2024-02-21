@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
-      cityName: response.data.name,
-      countryName: response.data.sys.country,
-      temperature: Math.round(response.data.main.temp),
-      feelsLike: Math.round(response.data.main.feels_like),
-      description: response.data.weather[0].description,
-      humidity: response.data.main.humidity,
-      pressure: response.data.main.pressure,
+      cityName: response.data.city,
+      countryName: response.data.country,
+      date: new Date(response.data.time * 1000),
+      temperature: Math.round(response.data.temperature.current),
+      feelsLike: Math.round(response.data.temperature.feels_like),
+      description: response.data.condition.description,
+      humidity: response.data.temperature.humidity,
+      pressure: response.data.temperature.pressure,
       wind: response.data.wind.speed,
       //iconUrl: response.data.condition.icon_url,
     });
@@ -23,8 +24,8 @@ export default function Weather() {
 
   let city = "London";
   let units = "metric";
-  const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  const apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(handleResponse);
 
   let form = (
@@ -82,8 +83,9 @@ export default function Weather() {
                 <li>
                   <h2>{weatherData.countryName}</h2>
                 </li>
-                <li>Sunday, 18 Feb 2024 📅</li>
-                <li>20:04 🕐</li>
+                <li>
+                  <FormattedDate date={weatherData.date} />
+                </li>
               </ul>
             </div>
           </div>
