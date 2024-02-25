@@ -39,11 +39,6 @@
   font-size: 12px;
 }
 
-.Weather .CurrentIcon {
-  position: relative;
-  top: -10px;
-}
-
 .Weather .CurrentTemperature {
   font-size: 55px;
   font-weight: 700;
