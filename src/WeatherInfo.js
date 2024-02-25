@@ -38,28 +38,28 @@ export default function WeatherInfo(props) {
       </div>
       <div className="row CurrentWeatherWidgets">
         <div className="col-3">
-          <i class="fa-solid fa-temperature-half"></i>
+          <i className="fa-solid fa-temperature-half"></i>
           <br />
           {props.data.feelsLike}°C
           <br />
           <small>Feels like</small>
         </div>
         <div className="col-3">
-          <i class="fa-brands fa-cloudscale fa-solid"></i>
+          <i className="fa-brands fa-cloudscale fa-solid"></i>
           <br />
           {props.data.pressure} bar
           <br />
           <small>Pressure</small>
         </div>
         <div className="col-3">
-          <i class="fa-solid fa-droplet"></i>
+          <i className="fa-solid fa-droplet"></i>
           <br />
           {props.data.humidity}%
           <br />
           <small>Humidity</small>
         </div>
         <div className="col-3">
-          <i class="fa-solid fa-wind"></i>
+          <i className="fa-solid fa-wind"></i>
           <br />
           {props.data.wind} km/h
           <br />

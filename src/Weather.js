@@ -24,7 +24,6 @@ export default function Weather(props) {
       icon: response.data.condition.icon,
     });
   }
-
   function search() {
     const apiKey = "aof4801f27bc8e543a47a5fc535tf9b8";
     let units = "metric";
