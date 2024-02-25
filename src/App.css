@@ -1,10 +1,23 @@
 .App {
   margin: 40px auto;
   max-width: 700px;
-  padding: 20px;
   text-align: center;
 }
-footer {
-  font-size: 12px;
+
+.App .container {
+  padding: 0;
+}
+.App footer {
+  font-family: monospace;
+  font-size: 11px;
   margin: 20px;
+}
+.App footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.App footer a:hover {
+  color: darkslategrey;
 }

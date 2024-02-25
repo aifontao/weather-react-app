@@ -39,7 +39,7 @@
   font-size: 12px;
 }
 
-.Weather .CurrentTemperature {
+.Weather .CurrentTemperatureValue {
   font-size: 55px;
   font-weight: 700;
   line-height: 1.3;
@@ -50,6 +50,13 @@
   font-weight: 600;
   position: relative;
   top: -25px;
+}
+.CurrentTemperature a {
+  color: rgb(75, 74, 74);
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  top: -1.5px;
 }
 
 .Weather .CurrentCityDetails {
@@ -72,6 +79,12 @@
   font-size: 13px;
   margin-top: 25px;
   padding: 25px 10px;
+}
+
+.Weather .fa-solid {
+  color: rgba(139, 192, 216, 0.95);
+  font-size: 25px;
+  margin-bottom: 12px;
 }
 
 /*night-mode background: linear-gradient(to top, #09203f 0%, #537895 100%);*/

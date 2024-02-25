@@ -1,22 +1,22 @@
 import React from "react";
 
 export default function FormattedDate(props) {
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
   let day = days[props.date.getDay()];
   let weekDay = props.date.getDate();
   let months = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   let month = months[props.date.getMonth()];
   let year = props.date.getFullYear();
@@ -29,6 +29,8 @@ export default function FormattedDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  console.log(props.date);
+
   return (
     <div>
       {day}, {weekDay} {month} {year} 📅

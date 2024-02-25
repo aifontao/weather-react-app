@@ -18,24 +18,24 @@ export default function CurrentTemperature(props) {
 
   if (unit === "celsius") {
     return (
-      <li>
-        <span className="CurrentTemperature">{temperature}</span>
+      <li className="CurrentTemperature">
+        <span className="CurrentTemperatureValue">{temperature}</span>
         <span className="Units">
-          <strong> °C</strong> |
+          <strong> °C </strong>
           <a href="/" onClick={showFahrenheit}>
-            °F
+            |°F
           </a>
         </span>
       </li>
     );
   } else {
     return (
-      <li>
-        <span className="CurrentTemperature">{temperature}</span>
+      <li className="CurrentTemperature">
+        <span className="CurrentTemperatureValue">{temperature}</span>
         <span className="Units">
-          <strong> °F</strong> |
+          <strong> °F </strong>
           <a href="/" onClick={showCelsius}>
-            °C
+            |°C
           </a>{" "}
         </span>
       </li>

@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
               <div className="col-5 p-0">
                 <WeatherIcon code={props.data.icon} />
               </div>
-              <div className="col-7">
+              <div className="col-7 p-0">
                 <ul className="CurrentWeatherDetails">
                   <CurrentTemperature celsius={props.data.temperature} />
                   <li className=" text-capitalize">{props.data.description}</li>
@@ -38,24 +38,32 @@ export default function WeatherInfo(props) {
       </div>
       <div className="row CurrentWeatherWidgets">
         <div className="col-3">
+          <i class="fa-solid fa-temperature-half"></i>
+          <br />
           {props.data.feelsLike}°C
           <br />
-          Feels like
+          <small>Feels like</small>
         </div>
         <div className="col-3">
+          <i class="fa-brands fa-cloudscale fa-solid"></i>
+          <br />
           {props.data.pressure} bar
           <br />
-          Pressure
+          <small>Pressure</small>
         </div>
         <div className="col-3">
+          <i class="fa-solid fa-droplet"></i>
+          <br />
           {props.data.humidity}%
           <br />
-          Humidity
+          <small>Humidity</small>
         </div>
         <div className="col-3">
+          <i class="fa-solid fa-wind"></i>
+          <br />
           {props.data.wind} km/h
           <br />
-          Wind
+          <small>Wind</small>
         </div>
       </div>
     </div>
