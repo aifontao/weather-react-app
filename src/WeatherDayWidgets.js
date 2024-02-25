@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WeatherDayWidgets(props) {
   return (
-    <div className="WeatherDayWidgets">
+    <div className="d-flex WeatherDayWidgets">
       <div className="row">
         <div className="col CurrentWeatherWidgets">
           <i className="fa-solid fa-temperature-half fa-2xl m-4"></i>

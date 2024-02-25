@@ -23,5 +23,11 @@ export default function WeatherIcon(props) {
     "mist-night": "windy-variant",
   };
 
-  return <WeatherSvg state={codeMapping[props.code]} width={85} height={85} />;
+  return (
+    <WeatherSvg
+      state={codeMapping[props.code]}
+      width={props.size}
+      height={props.size}
+    />
+  );
 }

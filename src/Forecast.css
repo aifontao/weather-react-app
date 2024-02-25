@@ -1,7 +1,9 @@
 .Forecast {
-  background-color: rgba(250, 250, 250, 0.3);
+  background-color: rgba(250, 250, 250, 0.2);
   border-radius: 10px;
   padding: 10px 8px;
+  margin-right: 5px;
+  align-items: center;
 }
 
 .Forecast .DailyForecast {
@@ -10,4 +12,18 @@
 
 .Forecast .forecast-icon {
   font-size: 5px;
+}
+
+.Forecast .Forecast-temperature-min {
+  opacity: 75%;
+  margin-left: 5px;
+}
+
+.Forecast .row {
+  margin: 0;
+}
+
+.Forecast i {
+  display: inline;
+  margin-right: 5px;
 }
