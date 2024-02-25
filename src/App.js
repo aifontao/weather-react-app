@@ -25,11 +25,7 @@ export default function App() {
           Github
         </a>{" "}
         and hosted on{" "}
-        <a
-          href="https://weather-react-app-aif.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://weather-react-app-aif.netlify.app/" rel="noreferrer">
           Netlify
         </a>
       </footer>
