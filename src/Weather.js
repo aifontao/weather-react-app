@@ -11,7 +11,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.city);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       cityName: response.data.city,
@@ -40,7 +39,6 @@ export default function Weather(props) {
 
   function handleCityChange(event) {
     setCity(event.target.value);
-    console.log(city);
   }
 
   let form = (
