@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import WeatherDayWidgets from "./WeatherDayWidgets";
+import FormattedDate from "./FormattedDate";
 
 import "./Weather.css";
 
@@ -21,7 +22,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       icon: response.data.weather[0].icon,
     });
   }
@@ -71,6 +72,11 @@ export default function Weather(props) {
           <div className="col-4 p-0">
             <WeatherDayWidgets data={weatherData} />
           </div>
+        </div>
+        <div className="mt-3 text-end">
+          <small>
+            Updated ▫ <FormattedDate date={weatherData.date} />
+          </small>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemperature from "./CurrentTemperature";
 
@@ -18,7 +17,7 @@ export default function WeatherInfo(props) {
                   <CurrentTemperature
                     celsiusTemperature={props.data.temperature}
                   />
-                  <li className=" text-capitalize">{props.data.description}</li>
+                  <li>max | min Feels like x</li>
                 </ul>
               </div>
             </div>
@@ -29,11 +28,12 @@ export default function WeatherInfo(props) {
                 <h1>{props.data.cityName}</h1>
               </li>
               <li>
-                <h2>{props.data.countryName}</h2>
+                <h2>
+                  {props.data.countryName}{" "}
+                  <i className="fa-solid fa-location-dot"></i>
+                </h2>
               </li>
-              <li>
-                <FormattedDate date={props.data.date} />
-              </li>
+              <li className=" text-capitalize">{props.data.description}</li>
             </ul>
           </div>
         </div>

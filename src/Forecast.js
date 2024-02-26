@@ -12,7 +12,7 @@ export default function Forecast(props) {
           <span>9%</span>
         </div>
         <div className="col">
-          <WeatherIcon code="clear-sky-day" size={30} />
+          <WeatherIcon code="09d" size={30} />
         </div>
         <div className="col">
           <span className="Forecast-temperature-max">21°</span>

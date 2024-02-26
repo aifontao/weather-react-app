@@ -31,10 +31,8 @@ export default function FormattedDate(props) {
   }
 
   return (
-    <div>
-      {day}, {weekDay} {month} {year} 📅
-      <br />
-      {hours}:{minutes} 🕰
-    </div>
+    <span>
+      {day}, {weekDay} {month} {year} | {hours}:{minutes}
+    </span>
   );
 }
