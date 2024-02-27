@@ -16,6 +16,7 @@ export default function Weather(props) {
       ready: true,
       cityName: response.data.name,
       countryName: response.data.sys.country,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       feelsLike: Math.round(response.data.main.feels_like),
@@ -26,6 +27,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
     });
   }
+
   function search() {
     const apiKey = "4c9b53e4f8f5eb00df5915bdca340605";
     let units = "metric";
@@ -67,7 +69,7 @@ export default function Weather(props) {
         <WeatherInfo data={weatherData} />
         <div className="d-flex mt-4">
           <div className="col-8 p-0">
-            <Forecast />
+            <Forecast coordinates={weatherData.coordinates} />
           </div>
           <div className="col-4 p-0">
             <WeatherDayWidgets data={weatherData} />
