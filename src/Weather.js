@@ -3,7 +3,6 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import WeatherDayWidgets from "./WeatherDayWidgets";
-import FormattedDate from "./FormattedDate";
 
 import "./Weather.css";
 
@@ -69,18 +68,13 @@ export default function Weather(props) {
       <div className="Weather">
         {form}
         <WeatherInfo data={weatherData} />
-        <div className="d-flex mt-4">
-          <div className="col-8 p-0">
-            <Forecast coordinates={weatherData.coordinates} />
-          </div>
-          <div className="col-4 p-0">
+        <div className="mt-4">
+          <div>
             <WeatherDayWidgets data={weatherData} />
           </div>
-        </div>
-        <div className="mt-3 text-end">
-          <small>
-            Updated ▫ <FormattedDate date={weatherData.date} />
-          </small>
+          <div>
+            <Forecast coordinates={weatherData.coordinates} />
+          </div>
         </div>
       </div>
     );

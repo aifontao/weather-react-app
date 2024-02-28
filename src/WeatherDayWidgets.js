@@ -2,37 +2,27 @@ import React from "react";
 
 export default function WeatherDayWidgets(props) {
   return (
-    <div className="d-flex WeatherDayWidgets">
+    <div className="WeatherDayWidgets">
       <div className="row">
         <div className="col CurrentWeatherWidgets">
-          <i className="fa-solid fa-temperature-half fa-2xl m-4"></i>
-          <br />
-          {props.data.feelsLike}°C
-          <br />
+          <i className="fa-solid fa-temperature-half fa-xl m-3"></i>
+          <div>{props.data.feelsLike}°C</div>
           <small>Feels like</small>
         </div>
         <div className="col CurrentWeatherWidgets">
-          <i className="fa-brands fa-cloudscale fa-solid fa-2xl m-4"></i>
-          <br />
-          {props.data.pressure} bar
-          <br />
-          <small>Pressure</small>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col CurrentWeatherWidgets">
-          <i className="fa-solid fa-droplet fa-2xl m-4"></i>
-          <br />
-          {props.data.humidity}%
-          <br />
+          <i className="fa-solid fa-droplet fa-xl m-3"></i>
+          <div>{props.data.humidity}%</div>
           <small>Humidity</small>
         </div>
         <div className="col CurrentWeatherWidgets">
-          <i className="fa-solid fa-wind fa-2xl m-4"></i>
-          <br />
-          {props.data.wind} km/h
-          <br />
+          <i className="fa-solid fa-wind fa-xl m-3"></i>
+          <div>{props.data.wind} km/h</div>
           <small>Wind</small>
+        </div>
+        <div className="col CurrentWeatherWidgets">
+          <i className="fa-brands fa-cloudscale fa-solid fa-xl m-3"></i>
+          <div>{props.data.pressure} bar</div>
+          <small>Pressure</small>
         </div>
       </div>
     </div>
