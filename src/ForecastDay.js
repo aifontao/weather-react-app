@@ -31,6 +31,8 @@ export default function ForecastDay(props) {
       </div>
       <div className="col">
         <span className="Forecast-temperature-max">{maxTemperature()}</span>
+      </div>
+      <div className="col">
         <span className="Forecast-temperature-min col">{minTemperature()}</span>
       </div>
     </div>

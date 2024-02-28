@@ -21,7 +21,10 @@ export default function WeatherInfo(props) {
                       <strong> °C </strong>
                     </span>
                   </li>
-                  <li>max | min Feels like x</li>
+                  <li>
+                    {props.data.maxTemperature}° / {props.data.minTemperature}°
+                    Feels like {props.data.feelsLike}°
+                  </li>
                 </ul>
               </div>
             </div>
