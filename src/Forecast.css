@@ -6,21 +6,8 @@
   align-items: center;
 }
 
-.Forecast .DailyForecast {
-  padding: 0;
-}
-
-.Forecast .forecast-icon {
-  font-size: 5px;
-}
-
 .Forecast .Forecast-temperature-min {
   opacity: 75%;
-  margin-left: 5px;
-}
-
-.Forecast .row {
-  margin: 0;
 }
 
 .Forecast i {
