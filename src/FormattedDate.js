@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function FormattedDate(props) {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
-  let day = days[props.date.getDay()];
-  let weekDay = props.date.getDate();
+  let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let weekDay = weekDays[props.date.getDay()];
+  let day = props.date.getDate();
   let months = [
     "Jan",
     "Feb",
@@ -32,7 +32,7 @@ export default function FormattedDate(props) {
 
   return (
     <span>
-      {day}, {weekDay} {month} {year} | {hours}:{minutes}
+      {weekDay}, {day} {month} {year} | {hours}:{minutes}
     </span>
   );
 }

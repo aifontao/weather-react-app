@@ -2,7 +2,6 @@ import React from "react";
 import "./WeatherDayWidgets.css";
 
 export default function WeatherDayWidgets(props) {
-  console.log(props);
   return (
     <div className="row WeatherDayWidgets">
       <div className="col CurrentWeatherWidgets">
