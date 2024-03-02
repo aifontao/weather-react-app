@@ -48,8 +48,8 @@ export default function Weather(props) {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <div className="row">
-        <div className="col-9">
+      <div className="row justify-content-evenly">
+        <div className="col-9 p-0">
           <input
             type="search"
             placeholder="Enter a city..."
@@ -57,7 +57,7 @@ export default function Weather(props) {
             onChange={handleCityChange}
           ></input>
         </div>
-        <div className="col-2">
+        <div className="col-2 p-0">
           <input type="submit" value="Search" className="button"></input>
         </div>
       </div>
