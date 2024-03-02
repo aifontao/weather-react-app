@@ -4,11 +4,11 @@
     rgba(201, 234, 252, 0.51) 14.9%,
     rgba(139, 192, 216, 0.73) 80%
   );
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 14px;
-  padding: 30px;
   margin: 0 auto;
   max-width: 600px;
+  padding: 30px 30px 10px;
 }
 
 .Weather form {
@@ -17,13 +17,14 @@
 }
 .Weather form input {
   border-radius: 10px;
+  font-family: monospace;
   font-size: 14px;
   padding: 10px 25px;
 }
 
 .Weather .button {
-  background-color: #403a70;
-  border: 1px solid #403a70;
+  background-color: rgba(11, 74, 104, 0.95);
+  border: 1px solid rgba(11, 74, 104, 0.95);
   border-radius: 10px;
   color: whitesmoke;
   font-weight: 700;

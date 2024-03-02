@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import WeatherDayWidgets from "./WeatherDayWidgets";
+import FormattedDate from "./FormattedDate";
 
 import "./Weather.css";
 
@@ -56,7 +57,7 @@ export default function Weather(props) {
             onChange={handleCityChange}
           ></input>
         </div>
-        <div className="col-3">
+        <div className="col-2">
           <input type="submit" value="Search" className="button"></input>
         </div>
       </div>
@@ -76,6 +77,7 @@ export default function Weather(props) {
             <WeatherDayWidgets data={weatherData} />
           </div>
         </div>
+        <FormattedDate data={weatherData.date} />
       </div>
     );
   } else {

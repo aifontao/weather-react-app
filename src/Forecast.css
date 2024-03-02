@@ -1,8 +1,8 @@
 .Forecast {
   background-color: rgba(250, 250, 250, 0.2);
   border-radius: 10px;
+  line-height: 2;
   padding: 8px 8px;
-  line-height: 1.8;
 }
 
 .Forecast .Forecast-temperature-min {

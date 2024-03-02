@@ -1,11 +1,10 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import FormattedDate from "./FormattedDate";
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo align-items-center">
       <div className="CurrentWeatherData">
         <div className="row ">
           <div className="col">
@@ -22,15 +21,15 @@ export default function WeatherInfo(props) {
               </div>
             </div>
           </div>
-
           <div className="col">
             <div className="CurrentCityDetails">
               <h1>
                 {props.data.cityName}
                 <small className="Country"> ▪ {props.data.countryName}</small>
               </h1>
-              <FormattedDate date={props.data.date} />
-              <div className="text-capitalize">{props.data.description}</div>
+              <div className="text-capitalize fs-9">
+                {props.data.description}
+              </div>
             </div>
           </div>
         </div>
