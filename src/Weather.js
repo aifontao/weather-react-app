@@ -68,12 +68,12 @@ export default function Weather(props) {
       <div className="Weather">
         {form}
         <WeatherInfo data={weatherData} />
-        <div className="mt-4">
-          <div>
-            <WeatherDayWidgets data={weatherData} />
-          </div>
-          <div>
+        <div className="row justify-content-evenly mt-4">
+          <div className="col-7 g-0">
             <Forecast coordinates={weatherData.coordinates} />
+          </div>
+          <div className="col ">
+            <WeatherDayWidgets data={weatherData} />
           </div>
         </div>
       </div>

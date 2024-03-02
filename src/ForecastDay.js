@@ -21,18 +21,18 @@ export default function ForecastDay(props) {
 
   return (
     <div className="row DailyForecast m-1">
-      <div className="col">{day()}</div>
-      <div className="Forecast-humidity col">
+      <div className="col-2">{day()}</div>
+      <div className="col-3 pe-0">
         <i className="fa-solid fa-droplet fa-s"></i>
         <span>{props.data.humidity}%</span>
       </div>
-      <div className="col">
+      <div className="col-3">
         <WeatherIcon code={props.data.weather[0].icon} size={30} />
       </div>
-      <div className="col">
+      <div className="col-2">
         <span className="Forecast-temperature-max">{maxTemperature()}</span>
       </div>
-      <div className="col">
+      <div className="col-2">
         <span className="Forecast-temperature-min col">{minTemperature()}</span>
       </div>
     </div>
