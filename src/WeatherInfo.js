@@ -4,7 +4,7 @@ import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo align-items-center">
+    <div className="WeatherInfo">
       <div className="CurrentWeatherData">
         <div className="row ">
           <div className="col">
