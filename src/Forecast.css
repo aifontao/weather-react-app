@@ -3,6 +3,7 @@
   border-radius: 10px;
   line-height: 2;
   padding: 8px 8px;
+  width: 350px;
 }
 
 .Forecast .Forecast-temperature-min {

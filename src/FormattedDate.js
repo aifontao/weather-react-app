@@ -39,7 +39,7 @@ export default function FormattedDate(props) {
   }
 
   return (
-    <div className="text-end mt-2">
+    <div className="mt-3">
       <small>
         Updated ▫ {weekDay}, {day} {month} {year} | {hours}:{minutes}
       </small>

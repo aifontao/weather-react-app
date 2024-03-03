@@ -12,6 +12,9 @@
 }
 
 .Weather form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin: 0 auto;
   padding-bottom: 30px;
 }
@@ -20,7 +23,9 @@
   font-size: 14px;
   padding: 10px 25px;
 }
-
+.Weather form .form-control {
+  width: 380px;
+}
 .Weather .button {
   background-color: rgba(11, 74, 104, 0.95);
   border: 1px solid rgba(11, 74, 104, 0.95);
@@ -35,15 +40,18 @@
   color: rgba(122, 185, 215, 0.95);
 }
 
-.Weather button {
-  border: none;
-  border-radius: 10px;
-  font-size: 12px;
-  justify-content: left;
-  align-items: center;
+.Weather .ForecastWidgets {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 @media (max-width: 600px) {
-  .Weather.form {
+  .Weather .ForecastWidgets {
+    align-items: center;
+    flex-direction: column;
+  }
+  .Weather form .form-control {
+    width: 240px;
   }
 }

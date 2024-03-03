@@ -20,7 +20,7 @@ export default function ForecastDay(props) {
   }
 
   return (
-    <div className="row DailyForecast m-1">
+    <div className="row DailyForecast m-1 justify-content-evenly">
       <div className="col-2">{day()}</div>
       <div className="col-3 pe-0">
         <i className="fa-solid fa-droplet fa-s"></i>

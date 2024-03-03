@@ -48,19 +48,17 @@ export default function Weather(props) {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <div className="row justify-content-evenly">
-        <div className="col-9 p-0">
-          <input
-            type="search"
-            placeholder="Enter a city..."
-            className="form-control"
-            onChange={handleCityChange}
-          ></input>
-        </div>
-        <div className="col-2 p-0">
-          <input type="submit" value="Search" className="button"></input>
-        </div>
-      </div>
+      <span>
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          className="form-control"
+          onChange={handleCityChange}
+        ></input>
+      </span>
+      <span>
+        <input type="submit" value="Search" className="button"></input>
+      </span>
     </form>
   );
 
@@ -69,13 +67,9 @@ export default function Weather(props) {
       <div className="Weather">
         {form}
         <WeatherInfo data={weatherData} />
-        <div className="row justify-content-evenly mt-4">
-          <div className="col-7 g-0">
-            <Forecast coordinates={weatherData.coordinates} />
-          </div>
-          <div className="col">
-            <WeatherDayWidgets data={weatherData} />
-          </div>
+        <div className="ForecastWidgets mt-4">
+          <Forecast coordinates={weatherData.coordinates} />
+          <WeatherDayWidgets data={weatherData} />
         </div>
         <FormattedDate data={weatherData.date} />
       </div>

@@ -22,3 +22,9 @@
 .App footer a:hover {
   color: darkslategrey;
 }
+
+@media (max-width: 600px) {
+  .App {
+    padding: 8px;
+  }
+}
